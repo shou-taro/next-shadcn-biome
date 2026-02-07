@@ -1,0 +1,48 @@
+{
+  // Automatically format files whenever they are saved.
+  // This helps maintain a consistent code style without manual formatting.
+  "editor.formatOnSave": true,
+
+  // Use Biome as the default formatter for plain JavaScript files.
+  // This overrides other formatters (e.g. Prettier) for this file type.
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  // Use Biome as the default formatter for React JavaScript (JSX) files.
+  // Ensures consistent formatting for component files.
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  // Use Biome as the default formatter for TypeScript files.
+  // Biome provides predictable formatting with lint-friendly output.
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  // Use Biome as the default formatter for React TypeScript (TSX) files.
+  // Helps keep formatting consistent across component-based code.
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  // Use Biome as the default formatter for JSON files.
+  // Keeps configuration files consistently formatted.
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  // Use Biome as the default formatter for JSON with comments (JSONC).
+  // This is commonly used for editor and tool configuration files.
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  // Apply Biome's automatic fixes on save.
+  // This runs Biome's fix action to resolve safe, autofixable issues.
+  // It complements formatOnSave by addressing minor lint issues as well.
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit"
+  }
+}

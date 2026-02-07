@@ -1,0 +1,47 @@
+name: Biome
+
+# Run on pull requests and on pushes to the main branch
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# This workflow only requires read access to the repository contents
+permissions:
+  contents: read
+
+jobs:
+  biome:
+    # Run the job on the GitHub-hosted Ubuntu runner
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the repository source code
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Set up pnpm for dependency management
+      # This workflow relies on pnpm and the pnpm lockfile
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      # Set up Node.js
+      # Enabling the pnpm cache speeds up dependency installation
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      # Install dependencies
+      # --frozen-lockfile ensures the lockfile is respected
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Run Biome checks
+      # Using pnpm ensures the Biome version pinned in the lockfile is used
+      # The 'biome ci' command runs formatting and lint checks in CI mode
+      - name: Run Biome
+        run: pnpm exec biome ci .
