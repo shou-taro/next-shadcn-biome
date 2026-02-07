@@ -1,0 +1,76 @@
+# ============================================================================
+# Commit Message Template
+# ============================================================================
+#
+# Basic format:
+# <emoji> <type>(<scope>): <summary>
+#
+# Example:
+# ✨ feat(api): add endpoint to fetch user list
+#
+# ---------------------------------------------------------------------------
+# Writing notes:
+# - Write only the commit message itself
+# - Keep the first line within 72 characters as a guideline
+# - Use the type, scope, and emoji lists below as a reference
+# - Lines starting with # will not be included in the commit
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# Common types:
+#
+# feat      : add a new feature
+# fix       : fix a bug
+# ui        : UI / UX changes
+# style     : formatting only (no behaviour change)
+# refactor  : code changes without behaviour change
+# perf      : performance improvements
+# test      : add or update tests
+# docs      : documentation
+# build     : build or configuration changes
+# ci        : CI / automation
+# chore     : maintenance tasks (e.g. dependency updates)
+# dx        : developer experience improvements
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# Optional emoji mapping:
+#
+# ✨ feat      🐛 fix       🎨 ui        🧹 style
+# ♻️ refactor ⚡️ perf     🧪 test      📚 docs
+# 🏗 build    🤖 ci        🔧 chore     🧠 dx
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# Scope examples (use only when helpful):
+#
+# api | auth | ui | db | config | test | ci | docs
+# ---------------------------------------------------------------------------
+
+
+# -------------------------
+# Commit message starts here
+# -------------------------
+
+<emoji> <type>(<scope>): <summary of the change>
+
+# Background or motivation (optional)
+#
+# Why:
+# - Why was this change needed?
+
+# What was done (optional)
+#
+# What:
+# - What was changed?
+
+# Additional notes (optional)
+#
+# Notes:
+# - Side effects, follow-ups, or cautions
+
+
+# For changes that affect compatibility
+#
+# BREAKING CHANGE:
+# - Describe the impact clearly
